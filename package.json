@@ -1,0 +1,20 @@
+{
+  "name": "twitterclone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrlosAren/TwitterClone.git"
+  },
+  "keywords": [],
+  "author": "Carlos Lopez Z. <krlosaren@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KrlosAren/TwitterClone/issues"
+  },
+  "homepage": "https://github.com/KrlosAren/TwitterClone#readme"
+}
