@@ -1,0 +1,22 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "scss/selector-no-redundant-nesting-selector": true,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "indentation": [
+      2,
+      {
+        "except": ["value"],
+        "severity": "warning"
+      }
+    ]
+  }
+}
