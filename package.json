@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"webpack-dev-server --config ./webpack.config.local.js --mode development",
+    "build:prod":"webpack --config ./webpack.config.js --mode production"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,33 @@
   "bugs": {
     "url": "https://github.com/KrlosAren/TwitterClone/issues"
   },
-  "homepage": "https://github.com/KrlosAren/TwitterClone#readme"
+  "homepage": "https://github.com/KrlosAren/TwitterClone#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "mini-css-extract-plugin": "^0.11.1",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
