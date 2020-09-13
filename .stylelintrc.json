@@ -4,6 +4,12 @@
     "stylelint-scss"
   ],
   "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-block-semicolon-newline-after": "always",
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "declaration-block-no-duplicate-properties": true,
+    "media-feature-name-no-unknown": true,
     "scss/selector-no-redundant-nesting-selector": true,
     "selector-pseudo-class-no-unknown": [
       true,

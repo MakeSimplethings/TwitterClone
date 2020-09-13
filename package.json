@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.local.js --mode development",
     "build:prod": "webpack --config ./webpack.config.js --mode production",
-    "fix:style": "npx stylelint **/*.scss"
+    "fix:style": "stylelint **/*.scss"
   },
   "repository": {
     "type": "git",
