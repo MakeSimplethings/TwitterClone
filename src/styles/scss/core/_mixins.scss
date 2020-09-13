@@ -1,0 +1,124 @@
+/* --- COMMONS --- */
+
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin pseudo($display: block, $position: absoulte, $content: '') {
+  content: $content;
+  display: $display;
+  position: $position;
+}
+
+@mixin css-triangle(
+  $color,
+  $direction,
+  $size: 6px,
+  $position: absolute,
+  $round: false
+) {
+  @include pseudo($position: $position);
+  height: 0;
+  width: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round($size / 2.5);
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round($size / 2.5);
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:placeholder {
+    @content;
+  }
+
+  &::placeholder {
+    @content;
+  }
+
+  &:input-placeholder {
+    @content;
+  }
+
+  &::input-placeholder {
+    @content;
+  }
+}
+
+/* ---SIZE MIXINS --- */
+
+@mixin size($width, $height: $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin container(
+  $uid: container,
+  $small: 640px,
+  $medium: 768px,
+  $large: 1024px,
+  $xlarge: 1280px
+) {
+  $container: (
+  '': 100%,
+  '-sm': $small,
+  '-md': $medium,
+  '-lg': $large,
+  '-xl': $xlarge,
+);
+  @each $prop, $value in $container {
+    .#{$uid}#{$prop} {
+      max-width: $value;
+    }
+  }
+}
+
+/* ---RESPONSIVE MIXINS --- */
+$breakpoints: (
+'phone': 400px,
+'phone-wide': 480px,
+'phablet': 560px,
+'tablet-small': 640px,
+'tablet': 768px,
+'tablet-wide': 1024px,
+'desktop': 1248px,
+'desktop-wide': 1440px,
+);
+
+@mixin respondTo($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
