@@ -32,19 +32,19 @@
     border-top: $size solid $color;
     margin-top: 0 - round($size / 2.5);
   } @else if $direction == up {
+    border-bottom: $size solid $color;
     border-left: $size solid transparent;
     border-right: $size solid transparent;
-    border-bottom: $size solid $color;
     margin-bottom: 0 - round($size / 2.5);
   } @else if $direction == right {
-    border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-left: $size solid $color;
+    border-top: $size solid transparent;
     margin-right: -$size;
   } @else if $direction == left {
-    border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-right: $size solid $color;
+    border-top: $size solid transparent;
     margin-left: -$size;
   }
 }
@@ -54,19 +54,7 @@
     @content;
   }
 
-  &:placeholder {
-    @content;
-  }
-
   &::placeholder {
-    @content;
-  }
-
-  &:input-placeholder {
-    @content;
-  }
-
-  &::input-placeholder {
     @content;
   }
 }
@@ -111,7 +99,7 @@ $breakpoints: (
 'desktop-wide': 1440px,
 );
 
-@mixin respondTo($width, $type: min) {
+@mixin respond-to($width, $type: min) {
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
     @if $type == max {
