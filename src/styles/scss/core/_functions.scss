@@ -1,0 +1,29 @@
+/* ---- COMMONS ---- */
+
+@function set-line-height() {
+  @return $font-size * 1.2;
+}
+
+@function darken-color($color, $amount) {
+  @return darken($color, $opacity);
+}
+
+@function lighten-color($color, $amount) {
+  @return ligthen($color, $amount);
+}
+
+@function get-opacity($color, $amount) {
+  @return rgba($color, $amount);
+}
+
+@function transform-text($type) {
+  @if ($type == uppercase) {
+    @return uppercase;
+  } @else if ($type == lowercase) {
+    @return lowercase;
+  } @else if ($type == capitalize) {
+    @return capitalize;
+  } @else {
+    @return initial;
+  }
+}

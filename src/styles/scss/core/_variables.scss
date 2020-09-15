@@ -1,0 +1,48 @@
+/* --- FONT --- */
+$font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+Ubuntu, 'Helvetica Neue', sans-serif;
+
+$font-size: 15px;
+$font-size-13: 13px;
+$font-size-19: 19px;
+
+$font-weight: 400;
+$font-weight-semi-bold: 700;
+$font-weight-bold: 800;
+/* --- FONT --- */
+
+/* --- COLORS --- */
+// light theme
+$color-primary: #1da1f2;
+$color-primary-semi-light: #8ed0f9;
+$color-primary-light: #71c9f8;
+
+$color-light: #fff;
+$color-light-semi-dark: #f5f8fa;
+$color-light-dark: #e6ecf0;
+
+$color-dark: #14171a;
+$color-dark-semi-light: #697986;
+$color-dark-light: #657786;
+$color-dark-bold: #15181c;
+
+// dark theme
+$color-yellow: #ffad1f;
+$color-red: #e0245e;
+$color-purple: #794bc4;
+$color-orange: #f45d22;
+$color-green: #17bf63;
+
+$color-primary-dark: #15202b;
+$color-primary-dark-semi-light: #192734;
+$color-primary-dark-light: #38444d;
+/* --- COLORS --- */
+
+/* --- BORDERS --- */
+$border-blue: 1px solid $color-primary;
+$border-dark: 1px solid $color-primary-semi-light;
+/* --- BORDERS --- */
+
+/* --- BORDER RADIUS --- */
+$border-radius: 20px;
+/* --- BORDER RADIUS --- */
