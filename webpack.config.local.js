@@ -5,10 +5,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, './src/js/index.js'),
+    main: path.resolve(__dirname, './src/js/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'public/'),
     filename: './js/[name].[hash].js',
   },
   devServer: {
@@ -87,7 +87,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/pug/index.pug'),
+      template: path.resolve(__dirname, './src/pug/views/restore-password.pug'),
       filename: 'index.html',
       inject: true,
     }),
