@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family;
+	font-size: $font-size;
+}
+
+svg {
+	width: 39px;
+}
+
+button {
+	@include button;
+}
