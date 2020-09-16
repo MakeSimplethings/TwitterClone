@@ -75,13 +75,7 @@ main.layout {
 					}
 				}
 				button {
-					@include button(
-						$color-primary,
-						$color-primary-dark
-					); /* 
-					&:hover {
-						background-color: lighten($color: $color-primary-dark, $amount: 5);
-					} */
+					@include button($color-primary, $color-primary-dark);
 				}
 			}
 		}
@@ -98,14 +92,6 @@ main.layout {
 				flex-direction: column;
 				justify-content: center;
 				gap: 40px;
-			}
-		}
-	}
-	@include custom-respond-to(1024px) {
-		.main__info {
-			&--logo {
-				width: 160%;
-				transform: translate(-48%, -45%);
 			}
 		}
 	}
@@ -161,6 +147,14 @@ main.layout {
 		.content__icon {
 			width: 43px;
 			height: 43px;
+		}
+	}
+	@include custom-respond-to(1024px) {
+		.main__info {
+			&--logo {
+				width: 160%;
+				transform: translate(-48%, -45%);
+			}
 		}
 	}
 }
