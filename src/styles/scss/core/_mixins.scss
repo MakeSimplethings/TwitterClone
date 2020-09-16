@@ -127,7 +127,7 @@ $breakpoints: (
 	'desktop-wide': 1440px,
 );
 
-@mixin respondTo($width, $type: min) {
+@mixin respond-to($width, $type: min) {
 	@if map_has_key($breakpoints, $width) {
 		$width: map_get($breakpoints, $width);
 		@if $type == max {
@@ -139,7 +139,7 @@ $breakpoints: (
 	}
 }
 
-@mixin customRespondTo($width) {
+@mixin custom-respond-to($width) {
 	@media only screen and (min-width: $width) {
 		@content;
 	}

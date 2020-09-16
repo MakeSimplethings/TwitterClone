@@ -3,7 +3,7 @@ main.layout {
 		display: flex;
 		flex-direction: column;
 	}
-	@include customRespondTo(900px) {
+	@include custom-respond-to(900px) {
 		height: 100vh;
 		display: grid;
 		grid-template: 1fr auto / 1fr;
@@ -13,7 +13,9 @@ main.layout {
 		.main__info,
 		.main__action {
 			width: 50%;
-			.main__action--form {
+		}
+		.main__action {
+			&--form {
 				display: flex;
 				justify-content: center;
 				padding: 0 30px;
@@ -86,22 +88,22 @@ main.layout {
 		.main__info {
 			order: 1;
 			height: 100%;
-			.main__info--logo {
+			&--logo {
 				position: absolute;
 				width: 200%;
 				bottom: 100%;
 				transform: translate(-52%, -48%);
 			}
-			.main__info--content {
+			&--content {
 				flex-direction: column;
 				justify-content: center;
 				gap: 40px;
 			}
 		}
 	}
-	@include customRespondTo(1024px) {
+	@include custom-respond-to(1024px) {
 		.main__info {
-			.main__info--logo {
+			&--logo {
 				width: 160%;
 				transform: translate(-48%, -45%);
 			}
@@ -117,18 +119,18 @@ main.layout {
 	padding: 15px;
 	background-color: $color-primary-light;
 	overflow: hidden;
-	.main__info--logo {
+	&--logo {
 		position: absolute;
 		width: 140%;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
-		@include customRespondTo(600px) {
+		@include custom-respond-to(600px) {
 			left: 70%;
 			width: 80%;
 		}
 	}
-	.main__info--content {
+	&--content {
 		height: 100%;
 		width: 100%;
 		position: relative;
@@ -139,7 +141,7 @@ main.layout {
 		flex-direction: column;
 		justify-content: space-evenly;
 		align-items: flex-start;
-		@include customRespondTo(600px) {
+		@include custom-respond-to(600px) {
 			width: 380px;
 			margin: auto;
 		}
@@ -147,11 +149,11 @@ main.layout {
 	.content {
 		display: flex;
 		align-items: center;
-		.content__icon {
+		&__icon {
 			width: 29px;
 			height: 29px;
 		}
-		.content__text {
+		&__text {
 			margin-left: 15px;
 		}
 	}
@@ -167,10 +169,10 @@ main.layout {
 	order: 1;
 	padding: 15px;
 	color: $color-light;
-	.main__action--form {
+	&--form {
 		display: none;
 	}
-	.main__action-secondary {
+	&-secondary {
 		.secondary__text {
 			font-weight: $font-weight-semi-bold;
 			font-size: 30px;
@@ -194,7 +196,7 @@ main.layout {
 		& a:last-child {
 			@include button($color-primary, $color-primary-dark);
 		}
-		@include customRespondTo(600px) {
+		@include custom-respond-to(600px) {
 			width: 380px;
 			margin: auto;
 		}
@@ -211,7 +213,7 @@ main.layout {
 	gap: 20px;
 	a {
 		@include button();
-		@include customRespondTo(600px) {
+		@include custom-respond-to(600px) {
 			width: 180px;
 		}
 		display: flex;
@@ -222,7 +224,7 @@ main.layout {
 	a.button__secondary {
 		@include button($color-primary, $color-primary-dark);
 	}
-	@include customRespondTo(800px) {
+	@include custom-respond-to(800px) {
 		display: none;
 	}
 }
