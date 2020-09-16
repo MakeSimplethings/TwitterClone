@@ -3,6 +3,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const fs = require('fs');
+
+function generateHtmlPlugins(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map((item) => {
+    // Split names and extension
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+    });
+  });
+}
+
+const htmlPlugins = generateHtmlPlugins('./src/pug/views');
 
 module.exports = {
   entry: {
@@ -15,6 +32,7 @@ module.exports = {
   devServer: {
     port: 4500,
     open: true,
+    writeToDisk: true,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -30,11 +48,9 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
+        use: {
+          loader: 'html-loader',
+        },
       },
       {
         test: /\.pug$/,
@@ -88,7 +104,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/pug/views/restore-password.pug'),
+      template: path.resolve(__dirname, './src/pug/index.pug'),
       filename: 'index.html',
       inject: true,
     }),
@@ -101,6 +117,7 @@ module.exports = {
     new StylelintPlugin({
       configFile: '.stylelintrc.json',
       fix: true,
+      quiet: false,
     }),
-  ],
+  ].concat(htmlPlugins),
 };
