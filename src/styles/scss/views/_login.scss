@@ -1,0 +1,151 @@
+@import '../core/variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+ 
+}
+ 
+body {
+  
+  font-family: $font-family;
+ 
+ 
+}
+
+.container {
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.login {
+  height: 500px;
+  margin-top: 20px;
+ 
+  width: 600px;
+    
+ 
+ 
+}
+ 
+ 
+.form {
+  align-items: center;
+    
+  display: flex;
+  flex-direction: column;
+ 
+ 
+    
+ 
+  &__logo img {
+    height: 30px;
+    
+    width: 37px;
+    
+            
+  }
+ 
+  &__h1 {
+    display: block;
+        
+    font-size: $font-size + 8;
+      
+    margin-top: 30px;
+ 
+ 
+ 
+  }
+
+  &__container {
+    background-color: $color-light-semi-dark;
+    display: flex;
+    flex-direction: column;
+ 
+    height: 60px;
+    justify-content: space-between;
+    margin-top: 20px;
+         
+ 
+    span {
+      display: block;
+      font-size: $font-size;
+      margin-left: 10px;
+      opacity: 0.65;
+ 
+ 
+    }
+
+    span:focus {
+ 
+      border-color: $color-primary;
+ 
+ 
+    }
+         
+ 
+ 
+  }
+
+  &__input {
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-size: $font-size+5;
+    height: 30px;
+    outline: none;
+    width: 540px;
+         
+     
+ 
+  }
+
+  &__input:focus {
+ 
+    border-color: $color-primary;
+ 
+ 
+ 
+  }
+
+  &__button {
+    background-color: $color-primary-semi-light;
+    border: none;
+    border-radius: 20px;
+    color: $color-light-semi-dark;
+    font-size: $font-size;
+    font-weight: $font-weight-semi-bold;
+    height: 47px;
+    margin-top: 20px;
+    width: 540px;
+ 
+ 
+  }
+ 
+  &__recovery {
+    margin-top: 30px;
+ 
+    a {
+      color: $color-primary;
+ 
+      text-decoration: none;
+ 
+    }
+ 
+    a:hover {
+ 
+      text-decoration: block;
+ 
+    }
+ 
+ 
+  }
+ 
+     
+ 
+    
+}
