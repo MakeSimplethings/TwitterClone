@@ -1,0 +1,20 @@
+extends ../components/_layout.pug
+block content
+	body
+		section(class="container")
+			div(class="login")
+				form(action="#" class="form")
+					div(class="form__logo")
+						img(src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-4.png", alt="twitter_logo")
+					h1(class="form__h1") Iniciar sesión en Twitter
+					div(class="form__container")
+						span Teléfono, correo o usuario
+						input(type="text" class="form__input")
+					div(class="form__container") 
+						span Contraseña
+						input(type="text" class="form__input")
+					button(class="form__button") Iniciar sesión
+					div(class="form__recovery")
+						a(href="#") ¿Olvidaste tu contraseña?·
+						a(href="#")  Regístrate en Twitter
+

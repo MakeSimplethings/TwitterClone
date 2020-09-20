@@ -1,6 +1,9 @@
+@import './components/typography';
 @import './core/variables';
+@import './core/global';
 @import './core/functions';
 @import './core/mixins';
 @import './core/general';
 @import './core/utilities';
 @import './views/landing';
+@import './views/restorePassword';

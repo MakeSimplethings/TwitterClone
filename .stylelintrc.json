@@ -2,13 +2,16 @@
   "extends": [
     "stylelint-config-sass-guidelines",
     "stylelint-config-recommended"
-  ], 
-  "plugins": [
-    "stylelint-scss"
   ],
+  "plugins": ["stylelint-scss"],
   "rules": {
-    "selector-max-compound-selectors": null,
-    "max-nesting-depth": null,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": ["attribute", "class", "id"]
+      }
+    ],
+    "max-nesting-depth": 5,
     "no-empty-source": null,
     "color-named": null,
     "string-quotes": "single",
@@ -32,7 +35,7 @@
       2,
       {
         "except": ["value"],
-        "message":"Please use 2 spaces for indentation",
+        "message": "Please use 2 spaces for indentation",
         "severity": "warning"
       }
     ]
