@@ -2,7 +2,7 @@
 @mixin button(
   $color: $color-light,
   $bg: $color-primary,
-	$border: $border-blue
+  $border: $border-blue
 ) {
   background-color: $bg;
   border: $border-blue;
@@ -37,9 +37,9 @@
 @mixin css-triangle(
   $color,
   $direction,
-	$size: 6px,
-	$position: absolute,
-	$round: false
+  $size: 6px,
+  $position: absolute,
+  $round: false
 ) {
   @include pseudo($position: $position);
   height: 0;
@@ -53,19 +53,19 @@
     border-top: $size solid $color;
     margin-top: 0 - round($size / 2.5);
   } @else if $direction == up {
+    border-bottom: $size solid $color;
     border-left: $size solid transparent;
     border-right: $size solid transparent;
-    border-bottom: $size solid $color;
     margin-bottom: 0 - round($size / 2.5);
   } @else if $direction == right {
-    border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-left: $size solid $color;
+    border-top: $size solid transparent;
     margin-right: -$size;
   } @else if $direction == left {
-    border-top: $size solid transparent;
     border-bottom: $size solid transparent;
     border-right: $size solid $color;
+    border-top: $size solid transparent;
     margin-left: -$size;
   }
 }
@@ -82,14 +82,6 @@
   &::placeholder {
     @content;
   }
-
-  &:input-placeholder {
-    @content;
-  }
-
-  &::input-placeholder {
-    @content;
-  }
 }
 
 /* ---SIZE MIXINS --- */
@@ -102,9 +94,9 @@
 @mixin container(
   $uid: container,
   $small: 640px,
-	$medium: 768px,
-	$large: 1024px,
-	$xlarge: 1280px
+  $medium: 768px,
+  $large: 1024px,
+  $xlarge: 1280px
 ) {
   $container: (
   '': 100%,
