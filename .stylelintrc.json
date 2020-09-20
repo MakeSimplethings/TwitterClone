@@ -7,6 +7,7 @@
     "stylelint-scss"
   ],
   "rules": {
+    "max-nesting-depth": 5,
     "no-empty-source": null,
     "color-named": null,
     "string-quotes": "single",
