@@ -39,7 +39,7 @@
   $direction,
   $size: 6px,
   $position: absolute,
-	$round: false
+  $round: false
 ) {
   @include pseudo($position: $position);
   height: 0;
@@ -92,7 +92,7 @@
   $small: 640px,
   $medium: 768px,
   $large: 1024px,
-	$xlarge: 1280px
+  $xlarge: 1280px
 ) {
   $container: (
   '': 100%,
