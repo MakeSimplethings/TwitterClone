@@ -1,3 +1,24 @@
+/* --- BUTTONS --- */
+@mixin button(
+  $color: $color-light,
+  $bg: $color-primary,
+  $border: $border-blue
+) {
+  background-color: $bg;
+  border: $border-blue;
+  border-radius: $border-radius;
+  color: $color;
+  font-weight: $font-weight-semi-bold;
+  height: 37px;
+  min-width: 130px;
+  padding: 0 15px;
+  transition: bacgroundColor 0.3s linear;
+
+  &:hover {
+    background-color: lighten($color: $bg, $amount: 5);
+  }
+}
+
 /* --- COMMONS --- */
 
 @mixin push--auto {
