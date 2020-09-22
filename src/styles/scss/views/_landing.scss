@@ -1,241 +1,271 @@
 main.layout {
-	.layout__main {
-		display: flex;
-		flex-direction: column;
-	}
 	@include custom-respond-to(900px) {
-		height: 100vh;
 		display: grid;
 		grid-template: 1fr auto / 1fr;
+		height: 100vh;
+
 		.layout__main {
 			flex-direction: row;
 		}
+
 		.main__info,
 		.main__action {
 			width: 50%;
 		}
+
 		.main__action {
 			&--form {
 				display: flex;
 				justify-content: center;
-				padding: 0 30px;
 				margin-bottom: 20px;
+				padding: 0 30px;
 			}
+
 			.form {
-				width: 100%;
+				align-items: center;
 				display: flex;
 				justify-content: space-between;
-				align-items: center;
+				width: 100%;
+
 				&__group {
-					margin-right: 15px;
-					position: relative;
-					width: 40%;
-					height: 56px;
 					background-color: $color-primary-dark-semi-light;
 					display: flex;
 					flex-direction: column;
+					height: 56px;
 					justify-content: space-between;
+					margin-right: 15px;
 					padding-top: 5px;
+					position: relative;
+					width: 40%;
+
 					.form__label {
-						width: 100%;
-						line-height: 20px;
 						color: $color-dark-light;
+						line-height: 20px;
+						overflow: hidden;
 						padding-left: 10px;
 						padding-right: 10px;
-						overflow: hidden;
-					}
-					.form__input {
-						order: 1;
-						outline: none;
 						width: 100%;
+					}
+
+					.form__input {
+						background: transparent;
+						border: none;
+						border-bottom: $border-light;
 						color: $color-light;
 						font-size: $font-size-19;
+						order: 1;
+						outline: none;
 						padding-left: 10px;
 						padding-right: 10px;
 						padding-top: 2px;
-						border: none;
-						background: transparent;
-						border-bottom: $border-light;
+						width: 100%;
+
 						&:focus {
 							border-bottom: $border-blue;
 						}
+
 						&:focus ~ .form__label {
 							color: $color-primary;
 						}
 					}
+
 					.form__link {
-						text-decoration: none;
 						color: $color-primary;
-						position: absolute;
-						width: 100%;
-						top: calc(100% + 5px);
+						font-size: $font-size-13;
 						left: 10px;
 						line-height: 17px;
-						font-size: $font-size-13;
+						position: absolute;
+						text-decoration: none;
+						top: calc(100% + 5px);
+						width: 100%;
 					}
 				}
+
 				button {
 					@include button($color-primary, $color-primary-dark);
 				}
 			}
 		}
+
 		.main__info {
-			order: 1;
 			height: 100%;
+			order: 1;
+
 			&--logo {
-				position: absolute;
-				width: 200%;
 				bottom: 100%;
+				position: absolute;
 				transform: translate(-52%, -48%);
+				width: 200%;
 			}
+
 			&--content {
 				flex-direction: column;
-				justify-content: center;
 				gap: 40px;
+				justify-content: center;
 			}
 		}
+	}
+
+	.layout__main {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
 .main__info {
+	background-color: $color-primary-light;
 	height: 230px;
 	order: 2;
+	overflow: hidden;
+	padding: 15px;
 	position: relative;
 	width: 100%;
-	padding: 15px;
-	background-color: $color-primary-light;
-	overflow: hidden;
+	@include custom-respond-to(1024px) {
+		.main__info {
+			&--logo {
+				transform: translate(-48%, -45%);
+				width: 160%;
+			}
+		}
+	}
+
 	&--logo {
-		position: absolute;
-		width: 140%;
 		left: 50%;
+		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		width: 140%;
 		@include custom-respond-to(600px) {
 			left: 70%;
 			width: 80%;
 		}
 	}
+
 	&--content {
-		height: 100%;
-		width: 100%;
-		position: relative;
+		align-items: flex-start;
 		color: $color-light;
-		font-size: $font-size-19;
-		font-weight: $font-weight-semi-bold;
 		display: flex;
 		flex-direction: column;
+		font-size: $font-size-19;
+		font-weight: $font-weight-semi-bold;
+		height: 100%;
 		justify-content: space-evenly;
-		align-items: flex-start;
+		position: relative;
+		width: 100%;
 		@include custom-respond-to(600px) {
-			width: 380px;
 			margin: auto;
+			width: 380px;
 		}
 	}
+
 	.content {
-		display: flex;
 		align-items: center;
+		display: flex;
+
 		&__icon {
-			width: 29px;
 			height: 29px;
+			width: 29px;
 		}
+
 		&__text {
 			margin-left: 15px;
 		}
 	}
+
 	& .content:nth-child(2) {
 		.content__icon {
-			width: 43px;
 			height: 43px;
-		}
-	}
-	@include custom-respond-to(1024px) {
-		.main__info {
-			&--logo {
-				width: 160%;
-				transform: translate(-48%, -45%);
-			}
+			width: 43px;
 		}
 	}
 }
 
 .main__action {
+	color: $color-light;
 	order: 1;
 	padding: 15px;
-	color: $color-light;
+
 	&--form {
 		display: none;
 	}
+
 	&-secondary {
+		@include custom-respond-to(600px) {
+			margin: auto;
+			width: 380px;
+		}
+
 		.secondary__text {
-			font-weight: $font-weight-semi-bold;
 			font-size: 30px;
+			font-weight: $font-weight-semi-bold;
 			line-height: 39px;
 			margin-top: 20px;
 		}
+
 		.secondary__title {
-			font-weight: $font-weight-semi-bold;
 			font-size: $font-size;
+			font-weight: $font-weight-semi-bold;
 			line-height: 20px;
 			margin: 59px 0 15px;
 		}
+
 		a {
-			text-decoration: none;
-			margin-bottom: 15px;
-			display: flex;
 			@include button;
-			justify-content: center;
 			align-items: center;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 15px;
+			text-decoration: none;
 		}
+
 		& a:last-child {
 			@include button($color-primary, $color-primary-dark);
-		}
-		@include custom-respond-to(600px) {
-			width: 380px;
-			margin: auto;
 		}
 	}
 }
 
 .main__buttons {
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
 	order: 3;
 	padding: 40px 15px;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
+	@include custom-respond-to(800px) {
+		display: none;
+	}
+
 	a {
 		@include button();
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		text-decoration: none;
 		@include custom-respond-to(600px) {
 			width: 180px;
 		}
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
 	}
+
 	a.button__secondary {
 		@include button($color-primary, $color-primary-dark);
-	}
-	@include custom-respond-to(800px) {
-		display: none;
 	}
 }
 
 nav.layout__nav {
-	width: 100%;
 	color: $color-light;
-	padding: 10px 15px;
-	font-size: $font-size-13;
+	column-gap: 15px;
 	display: flex;
 	flex-wrap: wrap;
+	font-size: $font-size-13;
 	justify-content: center;
-	column-gap: 15px;
+	padding: 10px 15px;
 	row-gap: 5px;
+	width: 100%;
+
 	.layout__nav--link {
-		text-decoration: none;
 		color: $color-dark-light;
 		margin: 5px 0;
+		text-decoration: none;
 	}
 }
