@@ -11,6 +11,7 @@
   font-weight: $font-weight-semi-bold;
   height: 37px;
   min-width: 130px;
+  outline: none;
   padding: 0 15px;
   transition: bacgroundColor 0.3s linear;
 
@@ -133,11 +134,5 @@ $breakpoints: (
     @media only screen and (#{$type}-width: $width) {
       @content;
     }
-  }
-}
-
-@mixin custom-respond-to($width) {
-  @media only screen and (min-width: $width) {
-    @content;
   }
 }
