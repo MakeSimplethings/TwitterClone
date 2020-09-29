@@ -76,6 +76,10 @@
     @content;
   }
 
+  &:placeholder {
+    @content;
+  }
+
   &::placeholder {
     @content;
   }

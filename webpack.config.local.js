@@ -86,6 +86,10 @@ module.exports = {
           },
           {
             loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              sourceMap: true,
+            },
           },
         ],
       },
@@ -112,7 +116,7 @@ module.exports = {
       filename: '[name].css',
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/app.*', '**/main.*', '**/commons.*'],
+      cleanOnceBeforeBuildPatterns: ['**/app.*.*', '**/main.*.*', '**/commons.*.*'],
     }),
     new StylelintPlugin({
       configFile: '.stylelintrc.json',
