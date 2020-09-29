@@ -1,4 +1,4 @@
-.container {
+.containerl {
   display: flex;
   justify-content: center;
 }
@@ -32,20 +32,22 @@
     background-color: $color-light-semi-dark;
     display: flex;
     flex-direction: column;
-
     height: 60px;
     justify-content: space-between;
     margin-top: 20px;
 
+  
     span {
       display: block;
       font-size: $font-size;
       margin-left: 10px;
       opacity: 0.65;
+      
     }
 
+
     span:focus {
-      border-color: $color-primary;
+      color: $color-primary;
     }
   }
 
@@ -59,10 +61,12 @@
     outline: none;
     width: 540px;
   }
-
+ 
   &__input:focus {
     border-color: $color-primary;
   }
+
+  
 
   &__button {
     background-color: $color-primary-semi-light;
