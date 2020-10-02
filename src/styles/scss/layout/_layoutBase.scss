@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  grid-template: 160px 1fr/ 320px 1fr 450px;
+
+  height: 100vh;
+
+  &--left {
+
+    grid-row: span 2;
+    
+    
+  }
+    
+
+  &--right {
+    
+    grid-column: 3;
+    grid-row: span 2;
+    
+    
+  }
+
+  &--center2 {
+    
+    grid-column: 2;
+    grid-row: 2;
+        
+        
+  }
+
+
+
+
+
+}
+
+
+.conteiner--left,
+.container--center,
+.container--right,
+.container--center2 {
+
+  border: 1px solid $color-dark-light;
+
+}
