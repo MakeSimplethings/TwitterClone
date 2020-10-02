@@ -91,7 +91,7 @@ module.exports = {
       filename: '[name].[hash].css',
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/app.*', '**/commons.*'],
+      cleanOnceBeforeBuildPatterns: ['**/app.*.*', '**/commons.*.*', '**/main.*.*'],
     }),
   ],
 };
