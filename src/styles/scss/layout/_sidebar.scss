@@ -1,20 +1,36 @@
 .menu {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 255px;
+
+
   a {
-    
-    @include a-sidebar(); 
-
-
-   }
-
+    color: $color-dark-bold;
+    display: block;
+    font-size: $font-size-19;
+    font-weight: $font-weight-semi-bold;
+    margin-top: 25px;
+    text-decoration: none;
   
+    &:hover {
+  
+      color: $color-primary;
+
+    
+  
+    }
+
+
+  }
+  
+  &__twittear {
+
+    margin-top: 25px;
 
 
 
-
-
-
-
-
+  }
 
 
 

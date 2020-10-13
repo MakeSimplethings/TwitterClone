@@ -1,10 +1,11 @@
 extends ../components/_layout.pug
 block content
-    section(class="container")
-        div(class="container--left")    
-        div(class="container--center")
-        div(class="container--right")
-        div(class="container--center2")
+    section(class="layoutcontainer")
+        div(class="layoutcontainer--left")
+            include ../components/_sidebar.pug    
+        div(class="layoutcontainer--center")
+        div(class="layoutcontainer--right")
+        div(class="layoutcontainer--center2")
 
 
     
