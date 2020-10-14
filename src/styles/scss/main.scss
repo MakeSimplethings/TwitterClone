@@ -1,4 +1,6 @@
 @import './components/typography';
+
+/* Core */
 @import './core/variables';
 @import './core/global';
 @import './core/functions';
@@ -6,7 +8,12 @@
 @import './core/general';
 @import './core/utilities';
 @import './core//font';
+
+/* Components */
 @import './components/forms';
+@import './components/modals';
+
+/* Views */
 @import './layout/layoutBase';
 @import './layout/footer';
 @import './views/landing';
