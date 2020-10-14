@@ -1,0 +1,117 @@
+.chat {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .chat {
+    border-radius: 15px 15px 0 0;
+    bottom: 0;
+    box-shadow: rgba(136, 153, 166, 0.2) 0 0 15px,
+    rgba(136, 153, 166, 0.15) 0 0 3px 1px;
+    display: block;
+    margin-right: 20px;
+    max-height: 530px;
+    position: fixed;
+    right: 0;
+    width: 350px;
+
+    &__header,
+    &__body--item {
+      border-bottom: 1px solid $color-primary-dark-light;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .chat__header {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 53px;
+    justify-content: space-between;
+
+    &--title {
+      color: $color-light;
+      font-size: $font-size-19;
+      font-weight: $font-weight-bold;
+    }
+
+    &--icons {
+      align-items: center;
+      color: $color-primary;
+      column-gap: 10px;
+      display: flex;
+      height: 100%;
+    }
+
+    .icon-message,
+    .icon-arrow {
+      align-items: center;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      height: 37px;
+      justify-content: center;
+      transform: rotate(0deg);
+      transition: linear background 0.3s;
+      width: 37px;
+
+      &:hover {
+        background: rgba($color-primary, 0.3);
+      }
+    }
+
+    .icon-arrow-down {
+      transform: rotate(180deg);
+      transition: transform linear 0.3s;
+    }
+
+    svg {
+      height: 22.5px;
+      width: 22.5px;
+    }
+  }
+
+  .chat__body {
+    min-height: 446px;
+  }
+
+  .chat__body--item {
+    color: #8899a6;
+    column-gap: 10px;
+    cursor: pointer;
+    display: grid;
+    font-size: $font-size;
+    grid-template-columns: 49px 1fr 85px;
+    grid-template-rows: 1fr;
+    height: 80px;
+    padding: 15px;
+    width: 100%;
+
+    .profile {
+      border-radius: 50%;
+      height: 47px;
+      overflow: hidden;
+      width: 47px;
+    }
+
+    .info {
+      &__name {
+        color: $color-light;
+        font-weight: $font-weight-bold;
+
+        span {
+          color: $color-dark-light;
+          font-weight: $font-weight;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .chat {
+    width: 400px;
+  }
+}
