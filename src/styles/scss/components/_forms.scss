@@ -1,0 +1,23 @@
+.input-group {
+  background-color: $color-light-semi-dark;
+  border-bottom: 2px solid $color-dark-light;
+  border-radius: 2px;
+  color: $color-primary-dark-light;
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 5px 10px;
+
+}
+
+.input__label {
+  display: block;
+}
+
+.input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+}
+

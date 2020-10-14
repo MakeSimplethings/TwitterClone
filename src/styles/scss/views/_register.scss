@@ -1,0 +1,72 @@
+.register-modal {
+  background-color: $color-light;
+  border-radius: $border-radius;
+  bottom: 0;
+  height: 90%;
+  left: 0;
+  margin: auto;
+  padding: 20px 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45%;
+  z-index: 10;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: $color-primary;
+      font-size: 30px;
+    }
+  }
+
+  &__form {
+    h2 {
+      font-size: 1.7em;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+
+.select {
+  margin-right: 10px;
+
+  &.month {
+    width: 50%;
+  }
+
+  &.day {
+    width: 20%;
+  }
+
+  &.year {
+    width: 30%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+.close {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  width: 25px;
+
+  &:hover {
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: $color-light;
+  }
+}

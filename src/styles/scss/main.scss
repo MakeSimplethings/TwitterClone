@@ -5,8 +5,11 @@
 @import './core/mixins';
 @import './core/general';
 @import './core/utilities';
+@import './core//font';
+@import './components/forms';
 @import './layout/layoutBase';
-@import './views/landing';
 @import './layout/footer';
+@import './views/landing';
 @import './views/restorePassword';
 @import './views/login';
+@import './views/register';

@@ -1,0 +1,31 @@
+.register-modal
+  .register-modal__header
+    span.close &times;
+    img(src="src/assets/Twitter_Logo_Blue.svg", alt="Twitter logo", width=40)
+    button.btn-primary Siguiente
+  .register-modal__form
+    h2 Crea tu cuenta
+    .input-group
+      label(for="name").input__label Nombre
+      input(type="text" id="name").input
+    .input-group
+      label(for="phone").input__label Teléfono
+      input(type="text" id="phone").input
+    button.mb-1 Usar correo
+    p
+      strong Fecha de nacimiento
+    p.text-light Esta información no será pública. Confirma tu propia edad, incluso si 
+      |esta cuenta es para una empresa, una mascota u otra cosa
+    .register-modal__date-container
+      .input-group.select.month
+        label(for="month").input__label Mes
+        select(name="month" id="month").input.select
+          option(value="0") 
+      .input-group.select.day
+        label(for="day").input__label Día
+        select(name="day" id="day").input.select
+          option(value="0") 
+      .input-group.select.year
+        label(for="year").input__label Año
+        select(name="year" id="year").input.select
+          option(value="0") 
