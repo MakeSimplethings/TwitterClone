@@ -1,4 +1,4 @@
-.container {
+.layoutcontainer {
   display: grid;
   grid-template: 160px 1fr/ 320px 1fr 450px;
 
@@ -35,10 +35,10 @@
 }
 
 
-.conteiner--left,
-.container--center,
-.container--right,
-.container--center2 {
+.layoutconteiner--left,
+.layoutcontainer--center,
+.layoutcontainer--right,
+.layoutcontainer--center2 {
 
   border: 1px solid $color-dark-light;
 
