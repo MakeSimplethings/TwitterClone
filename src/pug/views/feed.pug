@@ -3,7 +3,8 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{title}
-    script(src="https://kit.fontawesome.com/7a62fd066e.js" crossorigin="anonymous")
+    title Chat
   body
-    block content
+    include ../components/_chat-modal.pug
+    .container__feed.bg-primary-dark
+      include ../components/_chat.pug

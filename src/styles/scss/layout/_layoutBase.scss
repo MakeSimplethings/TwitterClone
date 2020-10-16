@@ -5,9 +5,10 @@
   height: 100vh;
 
   &--left {
-
+    display: flex;
     grid-row: span 2;
-    
+    justify-content: center;
+
     
   }
     

@@ -1,0 +1,157 @@
+.chat-modal {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &__overlay {
+    background-color: rgba(110, 118, 125, 0.4);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  &__content {
+    border-radius: 15px;
+    height: 560px;
+    position: relative;
+    width: 600px;
+  }
+}
+
+.chat-modal__content--header,
+.body__item {
+  border-bottom: 1px solid $color-primary-dark-light;
+}
+
+.chat-modal__content--header {
+  align-items: center;
+  display: grid;
+  grid-template: 1fr / 59px 1fr 130px;
+  height: 53px;
+  padding: 0 15px;
+
+  .header__icon {
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 37px;
+    justify-content: center;
+    padding-right: 10px;
+    transition: linear background 0.3s;
+    width: 37px;
+
+    &:hover {
+      background: rgba($color-primary, 0.3);
+    }
+
+    svg {
+      height: 22.5px;
+      width: 22.5px;
+    }
+  }
+
+  .header__title {
+    color: $color-light;
+    font-size: $font-size-19;
+    font-weight: $font-weight-bold;
+  }
+
+  .button {
+    height: 30px;
+    width: 100px;
+  }
+}
+
+.chat-modal__content--search {
+  align-items: center;
+  background-color: #253341;
+  display: grid;
+  grid-template: 1fr / 40px 1fr;
+  height: 40px;
+
+  .search__icon {
+    fill: #8899a6;
+    height: 20px;
+    margin: 10px 10px 10px 15px;
+    width: 20px;
+  }
+
+  .search__input {
+    background-color: transparent;
+    border: transparent;
+    color: $color-light;
+    height: 100%;
+    order: 2;
+    outline: none;
+    padding: 0 10px;
+    width: 100%;
+
+    &::placeholder {
+      color: #8899a6;
+    }
+  }
+
+  .search__input:focus + .search__icon {
+    fill: $color-primary;
+  }
+}
+
+.chat-modal__content--body {
+  height: auto;
+
+  .body__item {
+    align-items: center;
+    column-gap: 10px;
+    display: grid;
+    grid-template: 1fr / 40px 1fr;
+    height: 65px;
+    padding: 0 15px;
+    transition: background linear 0.3s;
+
+    &:hover {
+      background-color: rgba($color-primary-dark-semi-light, 0.5);
+    }
+
+    .profile {
+      align-items: center;
+      border-radius: 50%;
+      display: flex;
+      height: 38px;
+      justify-content: center;
+      overflow: hidden;
+      width: 38px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .info {
+      color: $color-light;
+      display: flex;
+      flex-direction: column;
+      font-weight: $font-weight-bold;
+      height: 100%;
+      justify-content: center;
+    }
+
+    span {
+      color: #8899a6;
+      font-weight: $font-weight;
+    }
+  }
+}
