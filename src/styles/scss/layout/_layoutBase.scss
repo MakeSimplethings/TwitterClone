@@ -1,13 +1,14 @@
-.container {
+.layoutcontainer {
   display: grid;
   grid-template: 160px 1fr/ 320px 1fr 450px;
 
   height: 100vh;
 
   &--left {
-
+    display: flex;
     grid-row: span 2;
-    
+    justify-content: center;
+
     
   }
     
@@ -35,10 +36,10 @@
 }
 
 
-.conteiner--left,
-.container--center,
-.container--right,
-.container--center2 {
+.layoutconteiner--left,
+.layoutcontainer--center,
+.layoutcontainer--right,
+.layoutcontainer--center2 {
 
   border: 1px solid $color-dark-light;
 
