@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  height: 58px;
+  justify-content: space-between;
+  padding: 0 15px;
+  width: 568px;
+
+
+  span {
+  
+    color: $color-dark;
+    font-size: $font-size-19;
+    font-weight: $font-weight-bold;
+  }
+
+  i {
+
+    color: $color-primary;
+  }
+  
+  
+  
+}

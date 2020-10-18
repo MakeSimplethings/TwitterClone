@@ -2,10 +2,13 @@ extends ../components/_layout.pug
 block content
     section(class="layoutcontainer")
         div(class="layoutcontainer--left")
-            include ../components/_sidebar.pug    
+             include ../components/_sidebar.pug 
         div(class="layoutcontainer--center")
-        div(class="layoutcontainer--right")
+            include ../components/_header.pug
+            include ../components/_searcher.pug   
         div(class="layoutcontainer--center2")
+        div(class="layoutcontainer--right")
+        
 
 
     
